@@ -1,0 +1,29 @@
+/* Styles go here */
+
+body {
+  margin-left: 10px;
+}
+.winter {background-color: #fff;}
+.spring {background-color: #0f0;}
+.summer {background-color: #ff8000;}
+.fall {background-color: #331900;color:#fff;}
+.borders{
+  border: 1px solid black;
+  border-bottom: none;
+}
+.bborder {border-bottom: 1px solid black;}
+.bborder span {
+  display:block;
+  padding: 0 0 0 10px;
+}
+.bborder span:first-of-type {margin-top: -10px;}
+.bborder span:last-of-type {
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+h2 {
+  margin: 0px;
+  padding: 10px;
+}
+

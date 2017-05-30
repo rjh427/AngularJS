@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+
+  <body ng-app="myApp">
+    <h1>Challenge One</h1>
+    <div ng-controller="myCtrl" class="borders">
+      <div ng-repeat="month in months | orderBy: 'ordinal' " >
+        <span>
+        <div class="bborder" class=""ng-class="month.season">
+        </span>
+          <h2>{{ month.english }} </h2>
+          <span> French word: {{ month.french }}</span>
+          <span> Number of Days: {{ month.days }}</span>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
+
