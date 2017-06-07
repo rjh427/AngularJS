@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html ng-app="plunker">
+<html ng-app="myApp">
 
   <head>
     <meta charset="utf-8" />
-    <title>AngularJS Plunker</title>
+    <title>ngMadLibs Rev. 1</title>
     <script>document.write('<base href="' + document.location + '" />');</script>
     <link rel="stylesheet" href="style.css" />
     <script data-require="angular.js@1.3.x" src="https://code.angularjs.org/1.3.20/angular.js" data-semver="1.3.20"></script>
-    <script src="app.js"></script>
+    <script src="myApp.js"></script>
   </head>
 
-  <body ng-controller="MainCtrl">
+  <body ng-controller="MyCtrl">
     <div id="ngMadLibs" class="bordered">
       <header id="header">
         <section id="logo" class="lfloat"></section>
@@ -20,8 +20,16 @@
       </header>
     <section id="userInput" ng-init="inputs=['male_name','job_title','tedious_task','dirty_task','celebrity','useless_skill','obnoxious_celebrity','huge_number','adjective']">
       <h4 id="instructions">Provide the following words:</h4>
+
+      <div class="gender-selection" ng-init="gender='female'">
+        <p>Select a gender: 
+          <label for="male">Male <input class="gender" type="radio" ng-model="gender" name="gender" value="male" checked /></label>
+          <label for="female">Female <input class="gender" type="radio" ng-model="gender" name="gender" value="female" /></label>
+        </p>
+      </div>
+
       <div class="col col1">
-        <input type="text" id="male_name"    ng-model="male_name"    title="Male name"    value="" placeholder="Male name" />
+        <input type="text" id="male_name"    ng-model="male_name"    title="Male name"    value="" placeholder="A name" />
         <input type="text" id="job_title"    ng-model="job_title"    title="Job title"    value="" placeholder="Job title" />
         <input type="text" id="tedious_task" ng-model="tedious_task" title="Tedious task" value="" placeholder="Tedious task" />
       </div>
@@ -40,15 +48,27 @@
     <section id="madLib">
       <p id="para1">
         <span class="insert">{{male_name}}</span> was a 
-        <span class="insert">{{job_title}}</span> who loved technology. Although he loved parts of his job, he absolutely hated 
+        <span class="insert">{{job_title}}</span> who loved technology. Although 
+        <span ng-if="gender=='female'">s</span>he loved parts of 
+
+        h<span ng-if="gender=='male'">is</span><span ng-if="gender=='female'">er</span> job, 
+
+        <span ng-if="gender=='male'">h</span><span ng-if="gender=='female'">sh</span>e absolutely hated 
         <span class="insert">{{tedious_task}}</span> and 
         <span class="insert">{{dirty_task}}</span>. So, 
-        <span class="insert">{{male_name}}</span> met with his life mentor, 
-        <span class="insert">{{celebrity1}}</span> who told him to learn how to 
-        <span class="insert">{{useless_skill}}</span> with Thinkful. Thinkful didn't offera course on 
-        <span class="insert">{{useless_skill}}</span> so he studied programming instead.</p>
-      <p id="para2">
-        What a great decision! With his new skills, 
+        <span class="insert">{{male_name}}</span> met with
+ 
+        h<span ng-if="gender=='male'">is</span><span ng-if="gender=='female'">er</span> life mentor, 
+        <span class="insert">{{celebrity1}}</span> who told 
+
+        h<span ng-if="gender=='male'">im</span><span ng-if="gender=='female'">er</span> to learn how to 
+        <span class="insert">{{useless_skill}}</span> with Thinkful. Thinkful didn't offer a course on 
+        <span class="insert">{{useless_skill}}</span> so 
+
+        <span ng-if="gender=='male'">h</span><span ng-if="gender=='female'">sh</span>e studied programming instead.</p>
+      <p id="para2">  What a great decision! With 
+
+        h<span ng-if="gender=='male'">is</span><span ng-if="gender=='female'">er</span> new skills, 
         <span class="insert">{{male_name}}</span> built a(n) 
         <span class="insert">{{adjective}}</span> robot named 
         <span class="insert">{{celebrity2}}</span> that not only loved 

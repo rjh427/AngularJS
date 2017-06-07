@@ -57,15 +57,15 @@ input {margin: 0 auto 10px;}
   min-width: 2em;
   text-align:center;
 }
-
+.gender {margin: 0 15px 0 0;}
 
 /*  Input box sizes */
-#male_name {width: 90px;}
-#job_title {width: 65px;}
-#tedious_task {width: 90px;}
-#dirty_task {width: 75px;}
-#celebrity1 {width: 70px;}
-#useless_skill {width: 90px;}
-#celebrity2 {width: 135px;}
-#huge_number {width: 100px;}
-#adjective {width: 70px;}
+#male_name {width: 100px;}
+#job_title {width: 85px;}
+#tedious_task {width: 115px;}
+#dirty_task {width: 95px;}
+#celebrity1 {width: 90px;}
+#useless_skill {width: 110px;}
+#celebrity2 {width: 165px;margin-left:-10px;}
+#huge_number {width: 120px;margin-left:15px;}
+#adjective {width: 90px;margin-left:25px;}
