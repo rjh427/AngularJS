@@ -1,0 +1,71 @@
+/* Put your css in here */
+/* html element overwrites */
+* {box-sizing: border-box;}
+body {font-family: "Comic Sans", sans-serif;}
+h1 {margin: 10px 0 0;}
+h1, h2, h3, h4, h5, h6 {font-weight:500;}
+p {display:inline-block;margin: 20px 10px;}
+p:last-of-type {margin-top: 0;}
+input {display:inline;padding-right: 13px;text-align:center;}
+input {margin: 0 auto 10px;}
+
+
+/* block level singular elements */
+#ngMadLibs {
+  margin: 40px auto 0;
+  width: 520px;
+}
+#logo {
+  background: url('images/mad-lib-happy-face.png') 30px 10px no-repeat;
+  background-size: 60px auto;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  height: 80px;
+  width: 120px;
+}
+#banner {
+  background: url('images/ng-mad-libs-logo.png') 140px 10px no-repeat;
+  background-size: 120px auto;
+  border-bottom: 1px solid black;
+  height:80px;
+  width:398px;
+}
+#banner {padding-top:30px;text-align: center;}
+#instructions {display:block;margin: 10px 0;}
+#userInput {
+  clear:both;
+  margin: 0 5px;
+  padding-top: 10px;
+}
+#madLib {border-top: 1px solid black;}
+
+/* repeated elements */
+.bordered {border: 1px solid black;}
+.lfloat {float: left;}
+.rfloat {float: right;}
+.col {
+  display:inline-block;
+  text-align:center;
+  width: 20%;
+}
+.col1 {margin-left:25px;}
+.col2 {margin-left:50px;}
+.col3 {margin-left:50px;}
+.insert {
+  border-bottom:1px solid #800;
+  display:inline-block;
+  min-width: 2em;
+  text-align:center;
+}
+.gender {margin: 0 15px 0 0;}
+
+/*  Input box sizes */
+#male_name {width: 100px;}
+#job_title {width: 85px;}
+#tedious_task {width: 115px;}
+#dirty_task {width: 95px;}
+#celebrity1 {width: 90px;}
+#useless_skill {width: 110px;}
+#celebrity2 {width: 165px;margin-left:-10px;}
+#huge_number {width: 120px;margin-left:15px;}
+#adjective {width: 90px;margin-left:25px;}

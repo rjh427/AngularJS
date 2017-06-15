@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>ngMadLibs Rev. 2</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <script data-require="angular.js@1.3.x" src="https://code.angularjs.org/1.3.20/angular.js" data-semver="1.3.20"></script>
+    <script src="myApp.js"></script>
+  </head>
+
+  <body ng-app="myApp" ng-controller="MyCtrl as vm">
+    <div id="ngMadLibs" class="bordered">
+      <header id="header">
+        <section id="logo" class="lfloat"></section>
+        <section id="banner" class="rfloat">
+          <h1>Automate This!</h1>
+        </section>
+      </header>
+    <section id="userInput" ng-init="inputs=['male_name','job_title','tedious_task','dirty_task','celebrity','useless_skill','obnoxious_celebrity','huge_number','adjective']">
+      <h4 id="instructions">Provide the following words:</h4>
+
+      <div class="gender-selection" ng-init="gender='female'">
+        <p>Select a gender: 
+          <label for="male">Male <input class="gender" type="radio" ng-model="gender" value="male" /></label>
+          <label for="female">Female <input class="gender" type="radio" ng-model="gender" value="female" /></label>
+        </p>
+      </div>
+
+
+      <div class="col col1">
+        <input type="text" id="male_name"    ng-model="male_name"    title="Male name"    value="" placeholder="A name" />
+        <input type="text" id="job_title"    ng-model="job_title"    title="Job title"    value="" placeholder="Job title" />
+        <input type="text" id="tedious_task" ng-model="tedious_task" title="Tedious task" value="" placeholder="Tedious task" />
+      </div>
+      <div class="col col2">
+        <input type="text" id="dirty_task"    ng-model="dirty_task"    title="Dirty task"    value="" placeholder="Dirty task" />
+        <input type="text" id="celebrity1"    ng-model="celebrity1"    title="Celebrity"     value="" placeholder="Celebrity" />
+        <input type="text" id="useless_skill" ng-model="useless_skill" title="Useless skill" value="" placeholder="Useless skill" />
+      </div>
+      <div class="col col3">
+        <input type="text" id="celebrity2"  ng-model="celebrity2"  title="Obnoxious celebrity" value="" placeholder="Obnoxious celebrity"  />
+        <input type="text" id="huge_number" ng-model="huge_number" title="Huge number"         value="" placeholder="Huge number"  />
+        <input type="text" id="adjective"   ng-model="adjective"   title="Adjective"           value="" placeholder="Adjective" />
+      </div>
+    </section>
+
+    <section id="madLib">
+      <p id="para1">
+        <span class="insert">{{male_name}}</span> was a 
+        <span class="insert">{{job_title}}</span> who loved technology. Although 
+
+        <span ng-if="gender=='female'">she</span>
+        <span ng-if="gender=='male'">he</span> loved parts of 
+
+        <span ng-if="gender=='female'">her</span>
+        <span ng-if="gender=='male'">his</span> job, 
+
+        <span ng-if="gender=='female'">she</span>
+        <span ng-if="gender=='male'">he</span> absolutely hated 
+
+        <span class="insert">{{tedious_task}}</span> and 
+        <span class="insert">{{dirty_task}}</span>. So, 
+        <span class="insert">{{male_name}}</span> met with
+ 
+        <span ng-if="gender=='female'">her</span>
+        <span ng-if="gender=='male'">his</span> life mentor, 
+
+        <span class="insert">{{celebrity1}}</span> who told 
+
+        <span ng-if="gender=='female'">her</span>
+        <span ng-if="gender=='male'">him</span> to learn how to 
+
+        <span class="insert">{{useless_skill}}</span> with Thinkful. Thinkful didn't offer a course on 
+        <span class="insert">{{useless_skill}}</span> so 
+
+        <span ng-if="gender=='female'">she</span>
+        <span ng-if="gender=='male'">he</span> studied programming instead.</p>
+
+      <p id="para2">  What a great decision! With 
+
+        <span ng-if="gender=='female'">her</span>
+        <span ng-if="gender=='male'">his</span> new skills, 
+
+        <span class="insert">{{male_name}}</span> built a(n) 
+        <span class="insert">{{adjective}}</span> robot named 
+        <span class="insert">{{celebrity2}}</span> that not only loved 
+        <span class="insert">{{dirty_task}}</span> but did it 
+        <span class="insert">{{huge_number}}</span> times faster.
+      </p>
+    </section>
+    </div>
+  </body>
+</html>
